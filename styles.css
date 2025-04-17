@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf");
+}
+@font-face {
+  font-family: "DM Sans-italic";
+  src: url("./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM sans", Times, serif;
+  font-size: 16px;
+}
+
+:root {
+  --backgroundColor: hsl(0, 0%, 96%);
+  --DarkText: hsl(0, 0%, 7%);
+  --Purple100: hsl(254, 88%, 90%);
+  --Purple500: hsl(256, 67%, 59%);
+  --Yellow100: hsl(31, 66%, 93%);
+  --Yellow500: hsl(39, 100%, 71%);
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+main .grid-container {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+main .grid-container .card-1 {
+  background-color: var(--Purple500);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  grid-area: card1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+main .grid-container .card-1 h1 {
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 300;
+  max-width: 350px;
+  font-family: "DM sans-italic", Times, serif;
+}
+main .grid-container .card-1 h1 span {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--Yellow500);
+}
+main .grid-container .card-1 p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgb(228, 226, 226);
+}
+main .grid-container .card-2 {
+  background-color: white;
+  overflow: hidden;
+  padding: 20px;
+  grid-area: card2;
+}
+
+main .grid-container .card-2 img {
+  width: 100%;
+  max-width: 350px;
+}
+
+main .grid-container .card-2 p {
+  font-size: 1.5rem;
+  max-width: 350px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+main .grid-container .card-3 {
+  background-color: var(--Yellow500);
+  overflow: hidden;
+  padding: 20px;
+  grid-area: card3;
+}
+main .grid-container .card-3 h1 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+main .grid-container .card-4 {
+  background-color: var(--Purple100);
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  grid-area: card4;
+}
+main .grid-container .card-4 h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+main .grid-container .card-5 {
+  background-color: var(--Purple500);
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+  grid-area: card5;
+}
+main .grid-container .card-5 p {
+  color: white;
+  font-size: 2rem;
+  max-width: 300px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+main .grid-container .card-6 {
+  background-color: white;
+  padding: 20px;
+  overflow: hidden;
+  grid-area: card6;
+}
+main .grid-container .card-6 h1 {
+  font-size: 3rem;
+}
+main .grid-container .card-6 p {
+  margin-block: 5px;
+}
+main .grid-container .card-6 img {
+  margin-top: 10px;
+}
+
+main .grid-container .card-7 {
+  background-color: var(--Yellow100);
+  padding: 20px;
+  overflow: hidden;
+  grid-area: card7;
+}
+main .grid-container .card-7 h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+main .grid-container .card-7 h1 span {
+  color: var(--Purple500);
+  font-size: 2rem;
+}
+main .grid-container .card-8 {
+  background-color: var(--Yellow500);
+  padding: 20px;
+  grid-area: card8;
+  overflow: hidden;
+}
+main .grid-container .card-8 h1 {
+  font-size: 2.2rem;
+}
+
+main .grid-container .card-1 img,
+main .grid-container .card-3 img,
+main .grid-container .card-4 img,
+main .grid-container .card-5 img,
+main .grid-container .card-6 img,
+main .grid-container .card-7 img,
+main .grid-container .card-8 img {
+  width: 100%;
+  max-width: 200px;
+}
+
+@media only screen and (min-width: 40rem) {
+  .container {
+    width: 100%;
+    padding: 20px 0px;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+  main .grid-container {
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+      "card7 card1 card1 card4"
+      "card7 card1 card1 card4"
+      "card7 card2 card3 card4"
+      "card8 card2 card3 card4"
+      "card8 card6 card5 card5"
+      "card8 card6 card5 card5";
+  }
+}
