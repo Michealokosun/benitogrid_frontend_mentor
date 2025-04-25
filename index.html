@@ -11,6 +11,10 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Frontend Mentor | Bento grid</title>
   </head>
@@ -76,5 +80,19 @@
         </div>
       </main>
     </div>
+
+    <script type="module">
+      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+      createChat({
+        webhookUrl:
+          "https://osemudiamentest3.app.n8n.cloud/webhook/8b11d9f1-02f1-433b-8576-ee15ee30e0e9/chat",
+        initialMessages: [
+          "Hey gorgeous! 💁‍♀️",
+          "Welcome to StylySavvy, your go-to glam spot in NYC. I’m Styly, your personal hair assistant. Need help booking an appointment, exploring services, or picking the perfect look? Just say the word—I’ve got you covered! 💇‍♀️✨",
+          "What can I help you with today",
+        ],
+      });
+    </script>
   </body>
 </html>
